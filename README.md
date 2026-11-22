@@ -1,6 +1,8 @@
 # Pi dictation cleanup
 
-A [Pi](https://pi.dev/) extension that copy-edits speech-to-text in the terminal editor before you submit it. Tested with Pi 1.6.0. It works with any dictation tool that types or pastes a trailing ` /?` (the leading space matters). It does not record audio or provide speech recognition.
+A [Pi](https://pi.dev/) extension that cleans up dictated text in the terminal editor before you submit it. I use it with [Voxtype](https://voxtype.io/), configured to append ` /?` (including the leading space) to each transcript without pressing Enter. When the extension sees that suffix, it uses recent conversation context to correct the last line and puts the result back in the editor for you to review or edit. Nothing is submitted automatically.
+
+Tested with Pi 1.6.0. Any dictation tool can trigger cleanup by typing or pasting the same suffix. The extension does not record or transcribe audio.
 
 ## Install
 
