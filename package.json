@@ -1,0 +1,11 @@
+{
+  "name": "pi-dictation-cleanup",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Clean up speech-to-text drafts in the Pi terminal editor before submission.",
+  "keywords": ["pi-package"],
+  "pi": {
+    "extensions": ["./extensions/dictation-cleanup.ts"]
+  }
+}
