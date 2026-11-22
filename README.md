@@ -15,7 +15,7 @@ pi install /path/to/pi-dictation-cleanup
 For a checkout hosted on GitHub, install it as a Git package:
 
 ```sh
-pi install git:git@github.com:OWNER/pi-dictation-cleanup.git
+pi install git:git@github.com:pkese/pi-dictation-cleanup.git
 ```
 
 Disable any previous standalone `~/.pi/agent/extensions/dictation-cleanup.ts` before loading the package to avoid duplicate hooks. Run `/reload` in existing sessions.
