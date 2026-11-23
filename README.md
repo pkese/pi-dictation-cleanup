@@ -24,7 +24,7 @@ Disable any previous standalone `~/.pi/agent/extensions/dictation-cleanup.ts` be
 
 - Configure your dictation tool to append ` /?` without sending Enter. In [Voxtype](https://voxtype.io/), set `append_text = " /?"` and `auto_submit = false` under `[output]`.
 - Pi corrects the last line in place and prefixes it with `🎙️: `. Earlier lines in the draft are used as context without being rewritten. The cursor moves to a new line for the next take.
-- Edit or dictate more before pressing Enter. Pi never submits automatically. Escape or a cleanup failure leaves the text unchanged.
+- Edit or dictate more before pressing Enter. Pi never submits automatically. On a connection failure, Pi retries up to five times, waiting 1, 2, 3, 4, and 5 seconds between attempts. Escape cancels cleanup, including during a retry wait. Cancellation or a final cleanup failure leaves the text unchanged.
 - Type `/verbatim` followed by a space before dictating to preserve the original separately in the saved Pi transcript when you submit. That entry is not added to the agent’s model context.
 
 No `AGENTS.md` change is needed. The extension adds guidance about potential mishearings when you first submit a message containing either dictation marker. It keeps the guidance on that conversation branch after compaction.
